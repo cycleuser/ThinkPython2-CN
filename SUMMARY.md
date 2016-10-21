@@ -8,5 +8,5 @@
 * [第五章 条件循环](chapter5.md)
 * [第六章 有返回值的函数](chapter6.md)
 * [第七章 迭代](chapter7.md)
-* 第八章 字符串
+* [第八章 字符串](chapter8.md)
 
