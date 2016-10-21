@@ -7,11 +7,8 @@
 赋值语句的作用是创建一个新的变量，并且赋值给这个变量：
 
 ```python
->>> message = 'And now for something completely different' 
->>> message = 'And now for something completely different' 
+>>> message = 'And now for something completely different'
 >>> n = 17 
->>> n = 17 
->>> pi = 3.141592653589793 
 >>> pi = 3.141592653589793 
 ```
 
