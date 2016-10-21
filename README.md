@@ -6,7 +6,9 @@
 >原作者 Allen B. Downey
 
 
->翻译 大胖哥
+>翻译 [CycleUser](http://blog.cycleuser.org)
+
+
 
 
 ##译者的话
