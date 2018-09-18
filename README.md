@@ -1,20 +1,20 @@
-#Think Python
+# Think Python
 
->第二版，基于Python3
-
-
->原作者 Allen B. Downey
+> 第二版，基于Python3
 
 
->翻译 [CycleUser](http://blog.cycleuser.org)
+> 原作者 Allen B. Downey
+
+
+> 翻译 [CycleUser](http://blog.cycleuser.org)
 
 
 
 
-##译者的话
+## 译者的话
 这是一本很经典的Python入门教材，也是一本很适合初学者的编程入门书籍。网上有过一些翻译，不过我觉得都还是自己动手来尝试一下，这样更有利于深入了解和体验，所以就再造轮子了。
 
-##作者的话
+## 作者的话
 这是Think Python这本书的第二版，本次使用的是Python3，与Python2有很多不同，这些不同之处会有标注。如果你用Python2的话，还是建议你去阅读[上一个版本](http://www.greenteapress.com/thinkpython/index.html)。
 
 读者可以到[亚马逊](http://amzn.to/Owtmjy)购买本书；或者下载 Think Python 2e [PDF格式的电子版.](http://www.greenteapress.com/thinkpython2/thinkpython2.pdf)；也可以在线阅读 Think Python 2e [HTML网页版本](http://www.greenteapress.com/thinkpython2/html/index.html)（推荐这个，都是文字格式，更方便）.
@@ -22,14 +22,14 @@
 
 样例代码以及其他问题的解决可以到[这里](http://www.greenteapress.com/thinkpython2/code)找(具体样例的链接在书中就有)。
 
-##简要介绍
+## 简要介绍
 Think Python 这本书是面向初学者介绍Python编程。
 
 首先介绍的是一些编程的基本内容，给出概念和解释，然后循序渐进地深入讲解每个概念。
 
 复杂的部分，比如递归以及面向对象编程，这些都分成一个个小块，以多个章节的方式来逐步介绍。
 
-##第二版的更新
+## 第二版的更新
 
 *	开始用Python3：书里面所有样例都用Python3来实现，参考代码也都做了升级，用Python2或者3都能运行。
 
@@ -46,21 +46,21 @@ Think Python 这本书是面向初学者介绍Python编程。
 
 其他由 Allen Downey 编写的自-和谐-由书籍都可以在[Green Tea Press](http://greenteapress.com/)找到.
 
-##英文原版下载
+## 英文原版下载
 
 *	编译好的PDF版本在这里下载：[PDF](http://www.greenteapress.com/thinkpython2/thinkpython2.pdf)。
 
 *	LaTeX代码在GitHub这里可以下载：[this GitHub repository](https://github.com/AllenDowney/ThinkPython2).
 
 
-##过往历史
+## 过往历史
 
 第一版在[这里](http://www.greenteapress.com/thinkpython)，是由剑桥大学出版社出版的，标题是 Python for Software Design. 可以到亚马逊去买到。
 本书的原始版本由Green Tea Press 出版，标题为 How to Think Like a Computer Scientist: Learning with Python. 这个版本可以从[Lulu.com](http://lulu.com)这个网站找到。其他由 Allen Downey 编写的自由书籍都可以在Green Tea Press找到.
 
-#前言
+# 前言
 
-##本书的奇幻历史
+## 本书的奇幻历史
 
 
 在1999年1月的时候呢，我正准备教一门Java的入门编程课。我当时已经教过三次了，受挫感很强。班上挂科率特别高，而且即使那些没挂科的学生编程的整体水平也特别低。
@@ -129,7 +129,7 @@ Think Python 这本书是面向初学者介绍Python编程。
 
                 Olin College 奥林商学院
 
-##致谢
+## 致谢
 
 非常感谢Jeff Elkner，是他把我的Java教材翻译成了Python，才引起了这一项目的开始，并且也把Python语言介绍给我，它已经是我最喜欢的编程语言了。
 也要感谢Chris Meyers，他对『如何像计算机科学家一样思考』的一些章节有贡献。
@@ -139,7 +139,7 @@ Think Python 这本书是面向初学者介绍Python编程。
 
 最后还要感谢所有曾对本书早期版本做出过贡献的同学们，以及其他参与改错和提出建议的朋友们（列表如下）。
 
-###贡献列表
+### 贡献列表
 
 有几百名读者，他们目光敏锐又思维迅捷，在过去的这些年里提供了各种建议，发现了各种错误。他们贡献和热情都是对本项目的巨大帮助。
 
