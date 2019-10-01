@@ -24,7 +24,8 @@ floor除法，中文有一种翻译是地板除法，挺难听，不过凑活了
 想要知道舍弃那部分的长度，可以用分钟数减去这么一个小时，然后剩下的分钟数就是了：
 
 ```Python
->>> remainder = minutes - hours * 60 >>> remainder
+>>> remainder = minutes - hours * 60 
+>>> remainder
 45 
 ```
 另外一个方法就是使用求模运算符了，百分号%就是了，求模运算就是求余数，会把两个数相除然后返回余数。
@@ -362,10 +363,10 @@ What do you mean, an African or a European swallow?
 
 ```Bash
 >>> x = 5
->>> y = 6
+>>>  y = 6
 	File "<stdin>", line 1
-	y = 6
-	^
+	  y = 6
+	  ^
 IndentationError: unexpected indent
 ```
 
