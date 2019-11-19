@@ -8,7 +8,7 @@
 
 >翻译 [CycleUser](http://blog.cycleuser.org)
 
-
+[在线阅读地址](https://cycleuser.gitbooks.io/think-python/content/)
 
 
 ## 译者的话
