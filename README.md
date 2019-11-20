@@ -1,16 +1,18 @@
 # Think Python
 
->第二版，基于Python3
+> 第二版，基于Python3
 
 
->原作者 Allen B. Downey
+> 原作者 Allen B. Downey
 
 
->翻译 [CycleUser](http://blog.cycleuser.org)
+> 翻译 [CycleUser](http://blog.cycleuser.org)
 
 [在线阅读地址](https://cycleuser.gitbooks.io/think-python/content/)
 
 
+
+=======
 ## 译者的话
 这是一本很经典的Python入门教材，也是一本很适合初学者的编程入门书籍。网上有过一些翻译，不过我觉得都还是自己动手来尝试一下，这样更有利于深入了解和体验，所以就再造轮子了。
 
