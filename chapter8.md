@@ -194,7 +194,27 @@ def find(word, letter):
 		if word[index] == letter:
 			return index
 		index = index + 1
-			return -1
+	return -1
+```
+
+
+```Python
+# 改进的find函数,利用列表收集字母letter在单词word中出现的全部位置.
+def find(word, letter): 
+    index = 0
+
+    result_list=[]
+
+    while index < len(word):
+        if word[index] == letter:
+            
+            result_list.append(index) 
+            
+        index = index + 1
+
+    return result_list
+
+find('banana','a')
 ```
 
 简单来说，find 函数，也就是查找，是方括号操作符[]的逆运算。方括号是知道索引然后提取对应的字符，而查找函数是选定一个字符去查找这个字符出现的索引位置。如果字符没有被找到，函数就返回-1。
@@ -215,7 +235,7 @@ word = 'banana'
 count = 0
 for letter in word:
 	if letter == 'a':
-	count = count + 1
+		count = count + 1
 	print(count)
 ```
 
