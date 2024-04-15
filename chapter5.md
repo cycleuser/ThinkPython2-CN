@@ -270,7 +270,7 @@ print_n(s, n)
 图5.1展示了前面样例中coundown函数在n=3的时候的栈图。
 
 ________________________________________
-![Figure 5.1: Stack diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure5.1.png)
+![Figure 5.1: Stack diagram.](./images/figure5.1.jpg)
 Figure 5.1: Stack diagram.
 ________________________________________
 
@@ -556,7 +556,7 @@ def draw(t, length, n):
 	t.bk(length*n)
 ```
 ________________________________________
-![Figure 5.2: A Koch curve.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure5.2Koch%20curve.png)
+![Figure 5.2: A Koch curve.](./images/figure5.2.jpg)
 Figure 5.2: A Koch curve.
 ________________________________________
 

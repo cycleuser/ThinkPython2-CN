@@ -136,7 +136,7 @@ Jack Kack Lack Mack Nack Oack Pack Qack
 [n:m]这种操作符，会返回字符串中从第『n』个到第『m』个的字符，包含开头的第『n』个，但不包含末尾的第『m』个。这个设计可能有点违背直觉，但可能有助于想象这个切片在字符串中的方向，如图8.1。
 
 ________________________________________
-![Figure 8.1](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure8.1.png)
+![Figure 8.1](./images/figure8.1.jpg)
 Figure 8.1: Slice indices.
 ________________________________________
 
@@ -406,7 +406,7 @@ True
 这次我们得到了正确的结果，但似乎循环只走了三次，这有点奇怪。为了弄明白带到怎么回事，我们可以画一个状态图。在第一次迭代的过程中，is_reverse 的框架如图8.2所示。
 
 ________________________________________
-![Figure 8.2](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure8.2.png)
+![Figure 8.2](./images/figure8.2.jpg)
 Figure 8.2: State diagram.
 ________________________________________
 

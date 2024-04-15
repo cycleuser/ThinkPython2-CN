@@ -32,7 +32,7 @@ time.second = 30
 写一个布尔函数，名为 is_after，接收两个 Time 对象，分别为 t1和 t2，然后如果 t1在时间上位于 t2的后面，就返回真，否则返回假。难度提高一下：不要用 if 语句，看你能搞定不。
 
 ________________________________________
-![Figure 16.1: Object diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython16.1.png)
+![Figure 16.1: Object diagram.](./images/figure16.1.jpg)
 Figure 16.1: Object diagram.
 ________________________________________
 ## 16.2 纯函数

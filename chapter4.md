@@ -396,8 +396,9 @@ A requirement that should be satisfied by the function before it ends.
 2.	4.7小节中的那个版本的arc函数并不太精确，因为对圆进行线性逼近总会超过真实情况。结果就是小乌龟总会距离正确位置偏离一些像素。我的样例给出了一种降低这种误差程度的方法。阅读一下代码，看你能不能理解。如果你画一个图标，也许就能明白代码是怎么工作的了。
 
 ________________________________________
- ![Turtle flowers](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonExercise4.2.png)
+ ![Turtle flowers and Turtle pies](./images/figure4.1-4.2.jpg)
 Figure 4.1: Turtle flowers.
+Figure 4.2: Turtle pies.
 ________________________________________
 ## # 练习2
 写一系列的合适的函数组合，画出图4.1所示的花图案。
@@ -406,8 +407,6 @@ ________________________________________
 [以及此链接文件](http://thinkpython2.com/code/polygon.py)
 ________________________________________
  
-![Turtle pies](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonExercise4.3.png)
-Figure 4.2: Turtle pies.
 ________________________________________
 ## # 练习3
 

@@ -44,7 +44,7 @@
 对变量进行再赋值总是很有用的，但你用的时候要做好备注和提示。如果变量的值频繁变化，就可能让代码难以阅读和调试。
 
 ________________________________________
-![Figure 7.1: State diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython7.1jpg.jpg)
+![Figure 7.1: State diagram.](./images/figure7.1.jpg)
 Figure 7.1: State diagram.
 ________________________________________
 ## 7.2 更新变量

@@ -73,7 +73,7 @@ class Point:
 下面的图表展示了上面这些赋值的结果。用于展示一个类及其属性的状态图也叫做类图；比如图15.1就是一例。
 
 ________________________________________
-![Figure 15.1: Object diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython15.1.png)
+![Figure 15.1: Object diagram](./images/figure15.1.jpg)
 Figure 15.1: Object diagram.
 ________________________________________
 
@@ -156,7 +156,7 @@ box.corner.y = 0.0
 表达式 box.corner.x 的意思是，『到 box 指代的对象中，选择名为 corner 的属性；然后到这个点对象中，选取名为 x 的属性值。』
 
 ________________________________________
-![Figure 15.2: Object diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython15.2.png)
+![Figure 15.2: Object diagram](./images/figure15.2.jpg)
 Figure 15.2: Object diagram.
 ________________________________________
 
@@ -251,7 +251,7 @@ False
 True
 ```
 ________________________________________
-![Figure 15.3: Object diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython15.3.png)
+![Figure 15.3: Object diagram](./images/figure15.3.jpg)
 Figure 15.3: Object diagram.
 ________________________________________
 图15.3展示了此时的类图的情况。这种运算叫做浅复制，因为复制了对象与对象内包含的所有引用，但不复制内嵌的对象。

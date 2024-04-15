@@ -18,7 +18,7 @@
 平常大家在纸上对变量赋值的方法就是写下名字，然后一个箭头指向它的值。这种图解叫做状态图，因为它能指明各个变量存储的是什么内容。下图就展示了上面例子中赋值语句的结果。
 
 ________________________________________
- ![Figure 2.1: State diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython2.1.png)
+ ![Figure 2.1: State diagram.](./images/figure2.1.jpg)
 Figure 2.1: State diagram.
 ________________________________________
 ## 2.2 变量名称

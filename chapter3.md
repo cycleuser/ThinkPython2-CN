@@ -329,7 +329,7 @@ NameError: name 'cat' is not defined
 
 每个函数都用一个框架来表示。框架的边上要标明函数的名字，框内填写函数内部的形参和变量。上文中样例代码的栈图如下图3.1所示。
 
-![Figure 3.1: Stack diagram.](http://www.greenteapress.com/thinkpython2/html/thinkpython2002.png)
+![Figure 3.1: Stack diagram.](./images/figure3.1.jpg)
 图3.1 栈图
 
 

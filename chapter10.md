@@ -57,7 +57,7 @@
 图10.1展示了 cheeses、numbers 和空列表的状态图：
 
 ________________________________________
-![Figure 10.1: State diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure10.1-%20State%20diagram.png)
+![Figure 10.1: State diagram](./images/figure10.1.jpg)
 Figure 10.1: State diagram.
 ________________________________________
 
@@ -363,7 +363,7 @@ b = 'banana'
 我们知道了 a 和 b 都是字符串，但我们不之道他们到底是不是同一个字符串。这就有可能有两种状态，如图10.2所示。
 
 ________________________________________
-![Figure 10.2: State diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure10.2-%20State%20diagram.png)
+![Figure 10.2: State diagram](./images/figure10.2.jpg)
 Figure 10.2: State diagram.
 ________________________________________
 
@@ -391,7 +391,7 @@ False
 所以这时候的状态图就应该如图10.3所示的样子了。
 
 ________________________________________
-![](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure10.3-%20State%20diagram.png)
+![Figure 10.3: State diagram](./images/figure10.3.jpg)
 Figure 10.3: State diagram.
 ________________________________________
 
@@ -416,7 +416,7 @@ True
 此时的状态图如图10.4所示。
 
 ________________________________________
-![Figure 10.4: State diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure10.4-%20State%20diagram.png)
+![Figure 10.4: State diagram](./images/figure10.4.jpg)
 Figure 10.4: State diagram.
 ________________________________________
 
@@ -465,7 +465,7 @@ def delete_head(t):
 形式参数 t 和变量 letters 都是同一对象的别名。栈图如图10.5所示。
 
 ________________________________________
-![Figure 10.5: Stack diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonFigure10.5-%20Stack%20diagram.png)
+![Figure 10.5: Stack diagram](./images/figure10.5.jpg)
 Figure 10.5: Stack diagram.
 ________________________________________
 

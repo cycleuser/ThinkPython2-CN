@@ -349,14 +349,14 @@ for last, first in directory:
 在状态图中表示元组的方法有两种。更详尽的版本会展示索引和元素，就如同在列表中一样。例如图12.1中展示了元组('Cleese', 'John') 。
 
 ________________________________________
-![Figure 12.1: State diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython12.1.png)
+![Figure 12.1: State diagram](./images/figure12.1.jpg)
 Figure 12.1: State diagram.
 ________________________________________
 
 但随着图解规模变大，你也许需要省略掉一些细节。比如电话字典的图解可能会像图12.2所示。
 
 ________________________________________
-![Figure 12.2: State diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython12.2.png)
+![Figure 12.2: State diagram](./images/figure12.2.jpg)
 Figure 12.2: State diagram.
 ________________________________________
 

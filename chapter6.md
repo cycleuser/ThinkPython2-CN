@@ -298,7 +298,7 @@ def factorial(n):
 图6.1表明了这一系列函数调用过程中的栈图。
 
 ________________________________________
-![Figure 6.1: Stack diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython6.1.png)
+![Figure 6.1: Stack diagram](./images/figure6.1.jpg)
 Figure 6.1: Stack diagram.
 ________________________________________
 
@@ -324,9 +324,11 @@ ________________________________________
 
 计算阶乘之后，我们来看看斐波拉契数列，这是一个广泛应用于展示递归定义的数学函数，[定义](http://en.wikipedia.org/wiki/Fibonacci_number如下：
 
-		fibonacci(0) = 0
- 	 	fibonacci(1) = 1
- 	 	fibonacci(n) = fibonacci(n−1) + fibonacci(n−2)
+```Tex
+fibonacci(0) = 0
+fibonacci(1) = 1
+fibonacci(n) = fibonacci(n−1) + fibonacci(n−2)
+```
 
 翻译成Python的语言大概如下这样：
 

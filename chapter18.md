@@ -88,7 +88,7 @@ rank_names 的一个元素是None空，因为没有牌值为0的纸牌。包含 
 Jack of Hearts
 ```
 ________________________________________
-![Figure 18.1: Object diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/18.1.png)
+![Figure 18.1: Object diagram.](./images/figure18.1.jpg)
 Figure 18.1: Object diagram.
 ________________________________________
 
@@ -300,7 +300,7 @@ move_cards 方法接收两个参数，一个 Hand 对象，以及一个要处理
 类图就是对这些关系的一个图形化的表示。比如，在途18.2中，就展示了 Card，Deck 以及 Hand 三个类的关系。
 
 ________________________________________
-![Figure 18.2: Class diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/18.2.png)
+![Figure 18.2: Class diagram.](./images/figure18.2.jpg)
 Figure 18.2: Class diagram.
 ________________________________________
 

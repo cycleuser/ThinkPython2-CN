@@ -248,7 +248,7 @@ def invert_dict(d):
 {1: ['a', 'p', 't', 'o'], 2: ['r']}
 ```
 ________________________________________
-![Figure 11.1: State diagram](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython11.1.png)
+![Figure 11.1: State diagram](./images/figure11.1.jpg)
 Figure 11.1: State diagram.
 ________________________________________
 
@@ -284,7 +284,7 @@ hash 是一个函数，接收任意一种值，然后返回一个整数。字典
 要理解这是怎么回事，就要参考一下图11.2，图中展示了当 n=4的时候函数调用的情况。
 
 ________________________________________
-![Figure 11.2: Call graph](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython11.2.png)
+![Figure 11.2: Call graph](./images/figure11.2.jpg)
 Figure 11.2: Call graph.
 ________________________________________
 
