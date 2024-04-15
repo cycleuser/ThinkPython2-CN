@@ -1,4 +1,4 @@
-#第十八章 继承
+# 第十八章 继承
 
 面向对象编程最常被人提到的语言功能就是继承了。继承就是基于一个已有的类进行修改来定义一个新的类。在本章我会用一些例子来演示继承，这些例子会用到一些类来表示扑克牌，成副的纸牌和扑克牌型。
 
@@ -6,7 +6,7 @@
 
 本章的代码样例可以在[这里](http://thinkpython2.com/code/Card.py)下载。
 
-##18.1  纸牌对象
+## 18.1 纸牌对象
 
 牌桌上面一共有52张扑克牌，每一张都属于四种花色之一，并且是十三张牌之一。花色为黑桃，红心，方块，梅花（在桥牌中按照降序排列）。排列顺序为 A，2，3，4，5，6，7，8，9，10，J，Q，K。根据具体玩的游戏的不同，A 可以比 K 大，也可以比2还小。
 
@@ -50,7 +50,7 @@ class Card:
 ```Python
 queen_of_diamonds = Card(1, 12)
 ```
-##18.2  类的属性
+## 18.2 类的属性
 
 想要以易于被人理解的方式来用 print 打印输出纸牌对象，我们就得建立一个从整形编码到对应的牌值和花色的映射。最自然的方法莫过于用字符串列表来实现。咱们可以先把这些列表赋值到类的属性中去：
 
@@ -94,7 +94,7 @@ ________________________________________
 
 图18.1是一个 Card 类对象以及一个 Card 实例的图解。Card 是一个类对象（就是类的一个实例）；它的类型是type。card1是 Card 的一个实例，所以它的类型是 Card。为了节省空间，我没有画出 suit_names 和 rank_names 的内容。
 
-##18.3  对比牌值
+## 18.3 对比牌值
 
 对于内置类型，直接就可以用关系运算符（<, >, ==,等等）比较两个值来判断二者的大小以及是否相等。对与用户自定义类型，咱们就要覆盖掉内置运算符的行为，这就需要提供一个名为__lt__的方法，这个lt 就是『less than』的缩写，意思是『小于』。
 
@@ -130,7 +130,7 @@ def __lt__(self, other):
 
 做个练习，为 Time 对象写一个__lt__方法。可以用元组对比，不过也可以对比整数。
 
-##18.4  Decks 成副的纸牌
+## 18.4 Decks 成副的纸牌
 
 现在咱们已经有了纸牌的类了，接下来的一不就是定义成副纸牌了。因为一副纸牌上是有各种牌，所以很自然就应该包含一个纸牌列表作为一个属性了。
 
@@ -149,12 +149,12 @@ class Deck:
 
 实现一副牌的最简单方法就是用网状循环了。外层循环枚举花色从0到3一共四种。内层的循环枚举从1到13的所有牌值。每一次循环都以当前的花色和牌值创建一个新的Card 对象，添加到 self.cards 列表中。
 
-##18.5  输出整副纸牌
+## 18.5 输出整副纸牌
 
 下面是 Deck 类的__str__方法：
 
 ```Python
-#inside class Deck:
+# inside class Deck:
 def __str__(self):
 	res = []
 	for card in self.cards:
@@ -184,12 +184,12 @@ King of Spades
 
 虽然结果看上去是52行，但实际上只是一个包含了很多换行符的一个长字符串。
 
-##18.6  添加，删除，洗牌和排序
+## 18.6 添加，删除，洗牌和排序
 
 要处理纸牌，我们还需要一个方法来从牌堆中拿出和放入纸牌。列表的 pop 方法很适合来完成这件任务：
 
 ```Python
-#inside class Deck:
+# inside class Deck:
 def pop_card(self):
 	return self.cards.pop()
 ```
@@ -197,7 +197,7 @@ pop 方法从列表中拿走最后一张牌，这样就是从一副牌的末尾�
 要添加一张牌，可以用列表的 append 方法：
 
 ```Python
-#inside class Deck:
+# inside class Deck:
 def add_card(self, card):
 	self.cards.append(card)
 ```
@@ -219,7 +219,7 @@ def shuffle(self):
 
 做个练习吧，写一个名为 sort 的方法给 Deck，使用列表的sort 方法来给 Deck 中的牌进行排序。sort 方法要用到我们之前写过的 __lt__ 方法来确定顺序。
 
-##18.7  继承
+## 18.7 继承
 I
 继承就是基于已有的类进行修改来获取新类的能力。举个例子，比方说我们需要一个表示『一手牌』的类，这个就是指一个牌手手中拿着的牌。『一手牌』和『一副牌』有些相似：都是由一系列的纸牌组成的，也都要有添加和移除纸牌的运算。
 
@@ -267,7 +267,7 @@ King of Spades
 接下来很自然地，我们把这段名为 move_cards 的方法放进去：
 
 ```Python
-#inside class Deck:
+# inside class Deck:
 def move_cards(self, hand, num):
 	for i in range(num):
 		hand.add_card(self.pop_card())
@@ -282,7 +282,7 @@ move_cards 方法接收两个参数，一个 Hand 对象，以及一个要处理
 
 然而继承也容易降低程序可读性。当调用一个方法的时候，有时候不容易找到该方法的定义位置。相关的代码可能跨了好几个模块。此外，很多事情可以用继承来实现，但不用继承也能做到同样效果，甚至做得更好。
 
-##18.8  类图
+## 18.8 类图
 
 目前为止，我们见过栈图了，栈图是展示一个程序的状态的，我们还见过对象图了，表示的是一个对象中的各个属性及其值。这些图都是对一个程序运行中某个瞬间的反映，因此随着程序运行而产生变化。
 
@@ -318,7 +318,7 @@ ________________________________________
 
 更细节化的图解就可能表现出一个 Deck 中会包含一个 Card 对象组成的列表，但一般情况下类图不会包括内置类型比如列表和字典。
 
-##18.9  调试
+## 18.9 调试
 
 继承可以让调试变得很夸你呢，因为你调用某个对象中的某个方法的时候，很难确定到底是调用的哪一个方法。
 
@@ -357,7 +357,7 @@ H
 
 如果你违背了上面这个『里氏替换原则』，你的代码就可能很悲剧地崩溃，就像无数纸牌坍塌一样。
 
-##18.10  数据封装
+## 18.10 数据封装
 
 之前的章节中，我们展示了所谓『面向对象设计』的开发规划模式。在这些章节中，我们显示确定好需要的对象—比如点，矩形以及时间—然后再定义一些类去代表这些内容。在这些例子中，类的对象与现实世界（或者至少是数学世界）中的一些实体都有显著的对应关系。
 
@@ -394,7 +394,7 @@ def process_word(self, word, order=2):
 	try:
 		self.suffix_map[self.prefix].append(word)
 	except
-		KeyError:             # if there is no entry for this prefix, make one
+		KeyError:       # if there is no entry for this prefix, make one
 	self.suffix_map[self.prefix] = [word]
 	self.prefix = shift(self.prefix, word)
 ```
@@ -413,7 +413,7 @@ def process_word(self, word, order=2):
 
 做一个练习，从[这里](http://thinkpython2.com/code/markov.py)下载我的马科夫分析代码，然后根据上面说的步骤来一步步把全局变量封装成一个名为 Markov 的新类的属性。[样例代码](http://thinkpython2.com/code/Markov.py) (一定要注意 M 是大写的哈)
 
-##18.11  Glossary 术语列表
+## 18.11 Glossary 术语列表
 encode:
 To represent one set of values using another set of values by constructing a mapping between them.
 
@@ -479,14 +479,14 @@ A program development plan that involves a prototype using global variables and 
 
 >数据封装：一种程序开发规划方式，用全局变量做原型体，然后逐步将这些全局变量转换成实例的属性。
 
-##18.12  练习
-###练习1
+## 18.12 练习
+## # 练习1
 
 阅读下面的代码，画一个 UML 类图，表示出程序中的类，以及类之间的关系。
 
 ```Python
 class PingPongParent:
-	pass  class Ping(PingPongParent):
+	pass class Ping(PingPongParent):
 	def __init__(self, pong):
 			self.pong = pong
 class Pong(PingPongParent):
@@ -501,11 +501,11 @@ class Pong(PingPongParent):
 		ping = Ping(pong)
 		pong.add_ping(ping)
 ```
-###练习2
+## # 练习2
 
 为 Deck 类写一个名为 deal_hands 的方法，接收两个参数，一个为牌型数量，一个为每一个牌型的纸牌数。该方法需要创建适当的牌型对象数量，处理适当的每个牌型中的纸牌数，然后返回一个牌型组成的列表。
 
-###练习3
+## # 练习3
 
 下面是扑克牌中可能的各个牌型，排列顺序为值的升序，出现概率的降序：
 

@@ -1,8 +1,8 @@
-#第二章 变量，表达式，语句
+# 第二章 变量，表达式，语句
 
 编程语言最强大的功能就是操作变量。变量就是一个有值的代号。
 
-##2.1  赋值语句 
+## 2.1 赋值语句 
 
 赋值语句的作用是创建一个新的变量，并且赋值给这个变量：
 
@@ -21,7 +21,7 @@ ________________________________________
  ![Figure 2.1: State diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython2.1.png)
 Figure 2.1: State diagram.
 ________________________________________
-##2.2  变量名称
+## 2.2 变量名称
 
 编程的人总得给变量起个有一定意义的名字才能记得住，一般情况就用名字来表示这个变量的用途了。
 
@@ -37,7 +37,7 @@ ________________________________________
 SyntaxError: invalid syntax 
 >>> more@ = 1000000 
 SyntaxError: invalid syntax 
->>> class = 'Advanced Theoretical Zymurgy'  
+>>> class = 'Advanced Theoretical Zymurgy' 
 SyntaxError: invalid syntax 
 ```
 第一个数字开头所以不合规则，第二个有非法字符@，第三个这个class咋不行呢？好奇吧？
@@ -47,17 +47,17 @@ SyntaxError: invalid syntax
 
 以下是Python3的关键词哈：
 
-* False      class      finally    is         
-* return None       continue   for        lambda     
-* try True       def        from   nonlocal   
-* while and        del        global     not        
-* with as         elif       if         or         
-* yield assert     else       import     pass 
-* break      except     in         raise 
+* False   class   finally  is     
+* return None    continue  for    lambda   
+* try True    def    from  nonlocal  
+* while and    del    global   not    
+* with as     elif    if     or     
+* yield assert   else    import   pass 
+* break   except   in     raise 
 
 你不用去记忆这些哈。因为一般大多数的开发环境里面，关键词都会有区别于普通代码的颜色提示你，你要是用他们做变量名了，一看就会知道的。
 
-##2.3  表达式和语句
+## 2.3 表达式和语句
 
 表达式是数值,变量和操作符的组合。单个值本身也被当作一个表达式，变量也是如此，下面这些例子都是一些正确表达式：
 
@@ -85,7 +85,7 @@ SyntaxError: invalid syntax
 
 输入语句的时候，解释器会执行它，就是会按照语句所说的去做。一般语句是没有值的。
 
-##2.4  脚本模式
+## 2.4 脚本模式
 
 以上我们一直在用Python的交互模式，就是直接咱们人跟解释器来交互。开始学的时候这样挺好的，但如果你要想一次运行多行代码，这样就很不方便了。
 
@@ -144,7 +144,7 @@ produces the output
 ```
 现在再把同样的语句输入到脚本中，然后用Python来运行一下。看看输出是啥样的？把脚本中的表达式修改一下，每一个都加一个打印语句再试试。
 
-##2.5  运算符优先级
+## 2.5 运算符优先级
 
 表达式可能会包含不止一个运算符，这些不同的运算先后次序就是运算符的优先级。对于数学运算符来说，Python就遵循着数学上的规则。下面这个PEMDAS、是用来记忆这些优先规则的好方法：
 
@@ -158,7 +158,7 @@ produces the output
 
 我不会花很大力气来记忆这些运算符的优先级。如果我怕记不住弄错了，就用括号来让优先级明确一下就好。
 
-##2.6  字符串操作
+## 2.6 字符串操作
 
 一般情况下，咱们不能对字符串进行数学运算的，即使字符串看上去像是数字也不行，所以以下这些都是非法操作：
 
@@ -174,7 +174,7 @@ produces the output
 +加号的意思就是字符串拼接了，会把两个字符串拼到一起，如下所示：
 
 ```Python
->>> first = 'throat'  
+>>> first = 'throat' 
 >>> second = 'warbler' 
 >>> first + second 
 throatwarbler 
@@ -186,11 +186,11 @@ throatwarbler
 
 这种加法和乘法实际上就是拼接和重复的意思。
 
-##2.7  注释
+## 2.7 注释
 
 程序会越来越庞大，也越复杂了，读起来就会更难了。公式语言很密集，靠阅读来理解代码，总是很困难的。
 
-为了解决阅读的困难，咱们就可以添加一些笔记到代码中，把程序的功能用自然语言来解释一下。这种笔记就叫注释了，使用井号#来开头的：
+为了解决阅读的困难，咱们就可以添加一些笔记到代码中，把程序的功能用自然语言来解释一下。这种笔记就叫注释了，使用井号# 来开头的：
 
 ```Python
 # compute the percentage of the hour that has elapsed percentage = (minute * 100) / 60 
@@ -199,10 +199,10 @@ throatwarbler
 注释可以另起一行，也可以放到行末尾：
 
 ```Python
-percentage = (minute * 100) / 60     # percentage of an hour 
+percentage = (minute * 100) / 60   # percentage of an hour 
 ```
 
-井号#后面的内容都会被忽略，因此不会影响程序的运行结果。
+井号# 后面的内容都会被忽略，因此不会影响程序的运行结果。
 
 
 一般注释都是用来解释代码的一些不明显的特性。一般情况下读代码的人应该能理解代码的功能是什么，所以用注释多是要解释这样做的目的是什么。
@@ -211,22 +211,22 @@ percentage = (minute * 100) / 60     # percentage of an hour
 下面这个注释就显然是多余的，根本没必要：
 
 ```Python
-v = 5     # assign 5 to v 
+v = 5   # assign 5 to v 
 ```
 
 下面这种注释包含了重要信息，就很重要了：
 
 ```python
-v = 5     # velocity in meters/second.  
+v = 5   # velocity in meters/second. 
 ```
 
 变量命名得当的话，就没必要用太多注释了，不过名字要是太长了，表达式读起来也挺麻烦，所以就得权衡着来了。
 
-##2.8  调试
+## 2.8 调试
 
 程序一般会有三种错误：语法错误，运行错误和语义错误。区分这三种错误有助于更快速地追踪错误。
 
-*   语法错误Syntax error:
+*  语法错误Syntax error:
 
 语法是指程序的结构和规则。比如括号要成对用。如果你的程序有某个地方出现了语法错误，Python会显示出错信息并退出，程序就不能运行了。最开始学习编程的这段时间，你遇到的最常见的估计就是这种情况。等你经验多了，基本就犯的少了，而且也很容易发现了。
 
@@ -238,7 +238,7 @@ v = 5     # velocity in meters/second.
 
 第三种就是语义错误，顾名思义，是跟意义相关。这种错误是指你的程序运行没问题，也不产生错误信息，但不能正确工作。程序可能做一些和设计目的不同的事情。发现语义错误特别不容易，需要你仔细回顾代码和程序输出，要搞清楚到底程序做了什么。
 
-##2.9  Glossary 术语列表
+## 2.9 Glossary 术语列表
 variable:
 A name that refers to a value.
 变量：有值的量。
@@ -334,8 +334,8 @@ An error in a program that makes it do something other than what the programmer 
 
 >语义错误：程序运行的结果和料想的不一样，没有完成设计的功能，而是干了点其他的事情。
 
-##2.10  练习
-###练习1
+## 2.10 练习
+## # 练习1
 
 像上一章一样，按我建议的，不论学了什么新内容，你都试着在交互模式上故意犯点错误，看看会怎么样。
 
@@ -349,7 +349,7 @@ An error in a program that makes it do something other than what the programmer 
 
 *	数学上你可以把x和y相乘写成xy，Python里面你这么试试看？
 
-###练习2  
+## # 练习2 
 
 把Python解释器当做计算器来做下面的练习：
 

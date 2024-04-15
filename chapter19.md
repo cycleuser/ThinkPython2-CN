@@ -1,9 +1,9 @@
-#第十九章 更多功能
+# 第十九章 更多功能
 我在本书中的一个目标就是尽量少教你 Python（译者注：而要多教编程）。有的时候完成一个目的有两种方法，我都会只选择一种而不提其他的。或者有的时候我就把第二个方法放到练习里面。
 
 现在我就要往回倒车一下，捡起一些当时略过的重要内容来给大家讲一下。Python 提供了很多并非必须的功能—你完全可以不用这些功能也能写出很好的代码—但用这些功能有时候能让你的代码更加简洁，可读性更强，或者更有效率，甚至有时候能兼顾这三个方面。
 
-##19.1  条件表达式
+## 19.1 条件表达式
 
 在5.4中，我们见到了条件语句。条件语句往往用于二选一的情况下；比如：
 
@@ -40,7 +40,7 @@ def factorial(n):
 
 ```Python
 def factorial(n):
-	return 1 if n == 0  else  return n * factorial(n-1)
+	return 1 if n == 0 else return n * factorial(n-1)
 ```
 
 条件表达式还可以用于处理可选参数。例如下面就是练习2中 GoodKangaroo 类的 init 方法：
@@ -64,7 +64,7 @@ def __init__(self, name, contents=None):
 
 一般来讲，你可以用条件表达式来替换掉条件语句，无论这些语句的分支是返回语句或者是赋值语句。
 
-##19.2  列表推导
+## 19.2 列表推导
 
 在10.7当中，我们看到了映射和过滤模式。例如，下面这个函数接收一个字符串列表，然后将每一个元素都用字符串方法 capitalize 处理成大写的，然后返回一个新的字符串列表：
 
@@ -112,7 +112,7 @@ def only_upper(t):
 
 但是，我也要辩护一下，列表推导会导致调试非常困难，因为你不能在循环内部放 print 语句了。我建议你只去在一些简单的地方使用，要确保你第一次写出来就能保证代码正常工作。也就是说初学者就还是别用为好。
 
-##19.3  生成器表达式
+## 19.3 生成器表达式
 
 生成器表达式与列表推导相似，用的不是方括号，而是圆括号：
 
@@ -154,7 +154,7 @@ StopIteration
 >>> sum(x**2 for x in range(5))
 30
 ```
-##19.4  any和all
+## 19.4 any和all
 
 Python 提供了一个名为 any 的内置函数，该函数接收一个布尔值序列，只要里面有任意一个是真，就返回真。该函数适用于列表：
 
@@ -188,7 +188,7 @@ Python 还提供了另外一个内置函数 all，该函数在整个序列都是
 
 做个练习，用 all 来改写一下9.3中的uses_all 函数。
 
-##19.5  集合
+## 19.5 集合
 
 在13.6中，我用了字典来查找存在于文档中而不存在于词汇列表中的词汇。我写的这个函数接收两个参数，一个是 d1是包含了文档中的词作为键，另外一个是 d2包含了词汇列表。程序会返回一个字典，这个字典包含的键存在于 d1而不在 d2中。
 
@@ -259,7 +259,7 @@ def uses_only(word, available):
 ```
 这里的<=运算符会检查一个集合是否切另外一个集合的子集或者相等，如果 word 中所有的字符都出现在 available 中就返回真。
 
-##19.6  计数器
+## 19.6 计数器
 
 计数器跟集合相似，除了一点，就是如果计数器中元素出现的次数超过一次，计数器会记录下出现的次数。如果你对数学上多重集的概念有所了解，就会知道计数器是一种对多重集的表示方式。
 
@@ -298,7 +298,7 @@ r 2
 p 1
 a 1
 ```
-##19.7  默认字典
+## 19.7 默认字典
 
 collection 模块还提供了一个默认字典，与普通字典的区别在于当你读取一个不存在的键的时候，程序会添加上一个新值给这个键。
 
@@ -372,7 +372,7 @@ def all_anagrams(filename):
 
 你可以从[这里](http://thinkpython2.com/code/PokerHandSoln.py)下载我给练习3写的样例代码，该代码中在 has_straightflush函数用的是默认集合。这份代码的不足就在于每次循环都要创建一个 Hand 对象，而不论是否必要。做个练习，用默认字典来该写一下这个程序。
 
-##19.8  命名元组
+## 19.8 命名元组
 
 很多简单的类就是一些相关值的集合。例如在15章中定义的 Point 类中就包含两个数值，x 和 y。当你这样定义一个类的时候，你通常要写一个 init 方法和一个 str 方法：
 
@@ -438,7 +438,7 @@ Or you could switch to a conventional class definition.
 
 >或者你可以把命名元组转换成一个常规的类的定义。
 
-##19.9  收集关键词参数
+## 19.9 收集关键词参数
 
 在12.4中，我们已经学过了如何写将参数收集到一个元组中的函数：
 
@@ -487,12 +487,12 @@ Point(x=1, y=2)
 ```Python
 >>> d = dict(x=1, y=2)
 >>> Point(d)
-Traceback (most recent call last):   File "<stdin>", line 1, in <module> TypeError: __new__() missing 1 required positional argument: 'y'
+Traceback (most recent call last):  File "<stdin>", line 1, in <module> TypeError: __new__() missing 1 required positional argument: 'y'
 ```
 
 当你写一些有大量参数的函数的时候，就可以创建和使用一些字典，这样能把各种常用选项弄清。
 
-##19.10  Glossary 术语列表
+## 19.10 Glossary 术语列表
 conditional expression:
 An expression that has one of two values, depending on a condition.
 
@@ -518,8 +518,8 @@ A function, usually passed as a parameter, used to create objects.
 
 >工厂：一个函数，通常作为参数传递，用来产生对象。
 
-##19.11  练习
-###练习1
+## 19.11 练习
+## # 练习1
 
 下面的函数是递归地计算二项式系数的。
 
@@ -528,7 +528,7 @@ def binomial_coeff(n, k):
 	"""Compute the binomial coefficient "n choose k".
 	n: number of trials
 	k: number of successes
-	returns: int     """
+	returns: int   """
 	if k == 0:
 		return 1
 	if n == 0:

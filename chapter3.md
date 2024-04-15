@@ -1,8 +1,8 @@
-#第三章  函数
+# 第三章 函数
 
 在编程的语境下，“函数”这个词的意思是对一系列语句的组合，这些语句共同完成一种运算。定义函数的时候，你要给这个函数指定一个名字，另外还好写出这些进行运算的语句。定义完成后，就可以通过函数名来“调用”函数。
 
-##3.1  函数调用
+## 3.1 函数调用
 
 此前我们已经见识过函数调用的一个例子了：
 
@@ -16,7 +16,7 @@
 一般来说，函数都要“传入”一个参数，“返回”一个结果。结果也被叫做返回值。Python提供了一些转换数值类型的函数。比如int这个函数就可以把值转换成整形，但不是什么都能转的，遇到不能转换的就会报错了，如下所示：
 
 ```Python 
->>> int('32')  
+>>> int('32') 
 32 
 >>> int('Hello') 
 ValueError: invalid literal for int(): Hello
@@ -25,7 +25,7 @@ ValueError: invalid literal for int(): Hello
 int这个函数能把浮点数转成整形，但不是很完美，小数部分就都给砍掉了。
 
 ```Python 
->>> int(3.99999)  
+>>> int(3.99999) 
 3 
 >>> int(-2.3) 
 -2 
@@ -43,12 +43,12 @@ float能把整形和字符串转变成浮点数：
 最后来看下，str可以把参数转变成字符串：
 
 ```Python 
->>> str(32)  
-'32'  
+>>> str(32) 
+'32' 
 >>> str(3.14159) 
 '3.14159' 
 ```
-##3.2  数学函数
+## 3.2 数学函数
 
 
 Python内置了一个数学模块，这一模块提供了绝大部分常用的数学函数。模块就是一系列相关函数的集合成的文件。
@@ -61,7 +61,7 @@ Python内置了一个数学模块，这一模块提供了绝大部分常用的�
 这个语句建立了一个模块对象，名字叫做math。如果你让这个模块对象显示一下，你就会得到与之相关的信息了：
 
 ```Python
->>> math  
+>>> math 
 <module 'math' (built-in)> 
 ```
 
@@ -69,7 +69,7 @@ Python内置了一个数学模块，这一模块提供了绝大部分常用的�
 
 ```Python
 >>> ratio = signal_power / noise_power 
->>> decibels = 10 * math.log10(ratio)  
+>>> decibels = 10 * math.log10(ratio) 
 >>> radians = 0.7 
 >>> height = math.sin(radians) 
 ```
@@ -97,7 +97,7 @@ math.pi这个表达式从数学模块中得到π的一个大概精确到15位的
 
 >译者注：画一个三角形就知道了，45度角两直角边是单位1，斜边必然是2的平方根了，对应的正弦余弦也都是这个值了。大家应该能理解吧？
 
-##3.3  组合
+## 3.3 组合
 
 目前为止，我们已经见识了一个程序所需要的大部分元素了：变量、表达式、语句。不过咱们都是一个个单独看到的，还没有把它们结合起来试试。
 
@@ -115,21 +115,21 @@ x = math.exp(math.log(x+1))
 你可以在任何地方放一个值，放任何一个表达式，只有一个例外：一个声明语句的左边必须是变量名。任何其他的表达式放到等号左边都会导致语法错误（当然也有例外，等会再给介绍）。
 
 ```Python
->>> minutes = hours * 60                 # right  
->>> hours * 60 = minutes                 # wrong! 
+>>> minutes = hours * 60         # right 
+>>> hours * 60 = minutes         # wrong! 
 SyntaxError: can't assign to operator 
 ```
 
 >译者注：上述例子里面把表达式复制为变量是不行的，所说的例外估计是指尤达大师命名法，这个后面看到再说。
 
-##3.4  自定义函数
+## 3.4 自定义函数
 
 目前我们学到了一些Python自带的函数，自己定义新的函数也是可以的。函数定义要指定这个新函数的名字，还需要一系列语句放到这个函数里面，当调用这个函数的时候，就会运行这些语句了。
 
 ```Python
 def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
+  print("I'm a lumberjack, and I'm okay.")
+  print("I sleep all night and I work all day.")
 ```
 
 这里的def就是一个关键词，意思是这是在定义一个函数。函数的名字就是print_lyrics，函数的命名规则和变量命名规则基本差不多，都是字幕梳子或者下划线，但是不能用数字打头。另外也不能用关键词做函数名，还要注意尽量避免函数名和变量名发生重复。
@@ -152,8 +152,8 @@ def print_lyrics():
 
 ```Python
 >>> def print_lyrics(): 
-...     
-print("I'm a lumberjack, and I'm okay.") ...     
+...   
+print("I'm a lumberjack, and I'm okay.") ...   
 print("I sleep all night and I work all day.") ... 
 ```
 在函数定义完毕的结尾，必须输入一行空白行。定义函数会创建一个函数类的对象，有type函数。
@@ -177,7 +177,7 @@ I'm a lumberjack, and I'm okay. I sleep all night and I work all day.
 ```Python
 def repeat_lyrics():
 	print_lyrics()
-    
+  
 ```
 
 然后调用一下这个函数：
@@ -189,16 +189,16 @@ I'm a lumberjack, and I'm okay. I sleep all night and I work all day. I'm a lumb
 
 当然了，实际这首歌可不是这样的哈。
 
-##3.5  定义并使用
+## 3.5 定义并使用
 
 把前面这些小块的代码来整合一下，整体上程序看着大概是这样的：
 
 ```Python
-def print_lyrics():     
-	print("I'm a lumberjack, and I'm okay.")     
-	print("I sleep all night and I work all day.")  
-def repeat_lyrics():     
-	print_lyrics()  
+def print_lyrics():   
+	print("I'm a lumberjack, and I'm okay.")   
+	print("I sleep all night and I work all day.") 
+def repeat_lyrics():   
+	print_lyrics() 
 repeat_lyrics() 
 ```
 
@@ -213,7 +213,7 @@ repeat_lyrics()
 
 然后再把函数调用放到底部，把print_lyrics这个函数的定义放到repeat_lyrics这个函数的后面。再看看这次运行会出现什么样子？
 
-##3.6  运行流程
+## 3.6 运行流程
 
 为了确保一个函数在首次被调用之前已经定义，你必须要之道语句运行的顺序，也就是所谓『运行流程』。
 
@@ -235,7 +235,7 @@ repeat_lyrics()
 
 总的来说，你阅读一个程序的时候，并不一定总是要从头到尾来读的。有时候你要按照运行流程来读才更好理解。
 
-##3.7  形式参数和实际参数
+## 3.7 形式参数和实际参数
 （译者注：这里提到的形参和实参实际上是传值方式的区别，这个在最基本的编程入门课程中老师应该都比较强调的。实际参数就是调用函数时候传给他的那个参数；而形式参数可以理解为函数内部定义用的参数。老外对这个的思辩也很多。这里我先不说太多，翻译着再看。
 大家可以去网上多搜索一下，比如在[StackOverflow](http://stackoverflow.com/questions/1788923/parameter-vs-argument)和[MSDN](https://msdn.microsoft.com/en-us/library/9kewt1b3.aspx)）
 
@@ -246,15 +246,15 @@ repeat_lyrics()
 
 ```Python
 def print_twice(bruce):
-	print(bruce)     
+	print(bruce)   
 	print(bruce) 
-    
+  
 ```
 
 这个函数把传来的实际参数的值赋给了一个名字叫做burce的形式参数。当函数被调用的时候，就会打印出形式参数的值两次（无论是什么内容）。任何能打印的值都适用于这个函数。
 
 ```Python
->>> print_twice('Spam')  
+>>> print_twice('Spam') 
 Spam 
 Spam 
 >>> print_twice(42) 
@@ -290,15 +290,15 @@ Eric, the half a bee.
 
 （译者注：这里要跟大家解释一下，传递参数的时候用的是实际参数，是把这个实际参数的值交给调用的函数，函数内部接收这个值，可以命名成任意其他名字的形式参数，差不多就这么个意思了。）
 
-##3.8  函数内部变量和形参都是局部的
+## 3.8 函数内部变量和形参都是局部的
 
 在函数内部建立一个变量，这个变量是仅在函数体内部才存在。例如：
 
 ```Python
-def cat_twice(part1, part2):     
-	cat = part1 + part2     
+def cat_twice(part1, part2):   
+	cat = part1 + part2   
 	print_twice(cat) 
-    
+  
 ```
 
 这个函数得到两个实参，把它们连接起来，然后调用print_twice函数来输出结果两次。
@@ -322,7 +322,7 @@ NameError: name 'cat' is not defined
 
 （译者注：当然你可以在函数外定义一个同名变量叫做bruce，但这两个没有关系，大家可以动手自己试试，这也是作者所鼓励的一种探索思维。）
 
-##3.9  栈图
+## 3.9 栈图
 
 要追踪一个变量能在哪些位置使用，咱们就可以画个图表来实现，这种图表叫做栈图。栈图和我们之前提到的状态图有些相似，也会表征每个变量的值，不同的是栈图还会标识出每个变量所属的函数。
 
@@ -345,12 +345,12 @@ NameError: name 'cat' is not defined
 例如，如果你想在print_twice这个函数中读取cat的值，就会得到一个变量名错误：
 
 ```Python
-Traceback (innermost last):  
-File "test.py", line 13, in __main__  
-cat_twice(line1, line2)   
-File "test.py", line 5, in cat_twice     
-print_twice(cat)   
-File "test.py", line 9, in print_twice     
+Traceback (innermost last): 
+File "test.py", line 13, in __main__ 
+cat_twice(line1, line2)  
+File "test.py", line 5, in cat_twice   
+print_twice(cat)  
+File "test.py", line 9, in print_twice   
 print(cat) 
 NameError: name 'cat' is not defined 
 ```
@@ -360,7 +360,7 @@ NameError: name 'cat' is not defined
 
 追溯中对函数顺序的排列是同栈图的方框顺序一样的。当前运行的函数会放在最底部。
 
-##3.10  有返回值的函数 和 无返回值的函数
+## 3.10 有返回值的函数 和 无返回值的函数
 
 咱们用过的一些函数，比如数学的函数，都会返回各种结果；也没别的好名字，就叫他们有返回值函数。其他的函数，比如print_twice，都是进行一些操作，但不返回值。那就叫做无返回值函数好了。
 
@@ -393,7 +393,7 @@ math.sqrt(5)
 无返回值的函数要么就是屏幕上显示出一些内容，要么就有其他的功能，但就是没有返回值。如果你把这种函数的结果返回给一个变量，就会的到特殊的值：空。
 
 ```Python
->>> result = print_twice('Bing')  
+>>> result = print_twice('Bing') 
 Bing Bing 
 >>> print(result) 
 None 
@@ -407,7 +407,7 @@ None
 ```
 我们目前为止写的函数还都是无返回值的。接下来的新的章节里面，咱们就要开始写一些有返回值的函数了。
 
-##3.11  为啥要用函数？
+## 3.11 为啥要用函数？
 
 为什么要费这么多力气来把程序划分成一个个函数呢？这么麻烦值得么？原因如下：
 
@@ -419,7 +419,7 @@ None
 
 *	精细设计的函数会对很多程序都有用处。一旦你写好了并且除了错，这种函数代码可以再利用。
 
-##3.12  调试
+## 3.12 调试
 
 给程序调试是你应当掌握的最关键技能之一了。尽管调试的过程会有挫败感，也依然是最满足智力，最有挑战性，也是编程过程中最有趣的一个项目了。
 
@@ -433,7 +433,7 @@ None
 
 例如，Linux是一个有上百万行代码的操作系统，但最早它起源于Linus Torvalsd的一段小代码。这个小程序是作者用来探索Intel的80386芯片的。根据Larry Greenfield回忆，『Linus早起的项目就是很小的一个程序，这个程序能够在输出AAAA和BBBB之间进行转换。这后来就发展除了Linux了。』（引用自Linux用户参考手册beta1版）
 
-##3.13  Glossary 术语列表
+## 3.13 Glossary 术语列表
 function:
 A named sequence of statements that performs some useful operation. Functions may or may not take arguments and may or may not produce a result.
 
@@ -544,32 +544,32 @@ A list of the functions that are executing, printed when an exception occurs.
 
 >追踪：对运行中函数的列表，当有异常的时候就会输出。
 
-##3.14  练习
-###  练习1
+## 3.14 练习
+## #  练习1
 
 写一个名叫right_justify的函数，形式参数是名为s的字符串，将字符串打印，前面流出足够的空格，让字符串最后一个字幕在第70列显示。
 
 ```Python
->>> right_justify('monty')                                                                  monty 
+>>> right_justify('monty')                                 monty 
 ```
 
 提示：使用字符拼接和重复来实现。另外Python还提供了内置的名字叫做len的函数，可以返回一个字符串的长度，比如len('monty')的值就是5了。
 
-###  练习2
+## #  练习2
 
 你可以把一个函数对象作为一个值赋给一个变量或者作为一个实际参数来传递给其他函数。比如，do_twice就是一个把其他函数对象当做参数的函数，它的功能是调用对象函数两次：
 
 ```Python
-def do_twice(f):     
-    f()     
-    f() 
+def do_twice(f):   
+  f()   
+  f() 
 ```
 
 下面是另一个例子，这里用了do_twice来调用一个名叫print_spam的函数两次。
 
 ```Python
-def print_spam():     
-print('spam')  
+def print_spam():   
+print('spam') 
 do_twice(print_spam) 
 ```
 1.把上面的例子写成脚本然后试一下。
@@ -584,7 +584,7 @@ do_twice(print_spam)
 
 [样例代码](http://thinkpython2.com/code/do_four.py)：
 
-###3  练习三
+## # 3 练习三
 
 注意：这个练习应该只用咱们目前学习过的语句和其他功能来实现。
 

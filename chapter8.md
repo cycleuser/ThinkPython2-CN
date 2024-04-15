@@ -1,8 +1,8 @@
-#第八章  字符串
+# 第八章 字符串
 
 字符串和整形、浮点数以及布尔值很不一样。一个字符串是一个序列，意味着是对其他值的有序排列。在本章你将学到如何读取字符串中的字符，你还会学到一些字符串相关的方法。
 
-##8.1  字符串是序列
+## 8.1 字符串是序列
 
 字符串就是一串有序的字符。你可以通过方括号操作符，每次去访问字符串中的一个字符：
 
@@ -50,7 +50,7 @@
 >>> letter = fruit[1.5]
 TypeError: string indices must be integers
 ```
-##8.2  len 长度
+## 8.2 len 长度
 
 len 是一个内置函数，会返回一个字符串中字符的长度：
 
@@ -75,7 +75,7 @@ IndexError: string index out of range
 ```
 或者你也可以用负数索引，意思就是从字符串的末尾向前数几位。fruit[-1]这个表达式给你最后一个字符，fruit[-2]给出倒数第二个，依此类推。
 
-##8.3  用 for 循环遍历字符串
+## 8.3 用 for 循环遍历字符串
 
 很多计算过程都需要每次从一个字符串中拿一个字符。一般都是从头开始，依次得到每个字符，然后做点处理，然后一直到末尾。这种处理模式叫遍历。写一个遍历可以使用 while 循环：
 
@@ -121,7 +121,7 @@ Jack Kack Lack Mack Nack Oack Pack Qack
 
 当然了，有点不准确的地方，因为有“Ouack”和 “Quack”两处拼写错了。做个练习，修改一下程序，改正这个错误。
 
-##8.4  字符串切片
+## 8.4 字符串切片
 
 字符串的一段叫做切片。从字符串中选择一部分做切片，与选择一个字符有些相似：
 
@@ -160,7 +160,7 @@ ________________________________________
 
 那么来练习一下，你觉得 fruit[:]这个是什么意思？在程序中试试吧。
 
-##8.5  字符串不可修改
+## 8.5 字符串不可修改
 
 大家总是有可能想试试把方括号在赋值表达式的等号左侧，试图去更改字符串中的某一个字符。比如：
 
@@ -184,7 +184,7 @@ TypeError: 'str' object does not support item assignment
 
 上面的例子中，对 greeting 这个字符串进行了切片，然后添加了一个新的首字母过去。这并不会对原始字符串有任何影响。（译者注：也就是 greeting 这个字符串的值依然是原来的值，是不可改变的。）
 
-##8.6  搜索
+## 8.6 搜索
 下面这个函数是干啥的？
 
 ```Python
@@ -201,18 +201,18 @@ def find(word, letter):
 ```Python
 # 改进的find函数,利用列表收集字母letter在单词word中出现的全部位置.
 def find(word, letter): 
-    index = 0
+  index = 0
 
-    result_list=[]
+  result_list=[]
 
-    while index < len(word):
-        if word[index] == letter:
-            
-            result_list.append(index) 
-            
-        index = index + 1
+  while index < len(word):
+    if word[index] == letter:
+      
+      result_list.append(index) 
+      
+    index = index + 1
 
-    return result_list
+  return result_list
 
 find('banana','a')
 ```
@@ -226,7 +226,7 @@ find('banana','a')
 
 做个练习，修改一下 find 函数，加入第三个参数，这个参数为查找开始的字符串位置。
 
-##8.7  循环和计数
+## 8.7 循环和计数
 
 下面这个程序计算了字母 a 在一个字符串中出现的次数：
 
@@ -245,7 +245,7 @@ for letter in word:
 
 然后再重写一下这个函数，这次不再让它遍历整个字符串，而使用上一节中练习的三参数版本的 find 函数。
 
-##8.8  字符串方法
+## 8.8 字符串方法
 
 字符串提供了一些方法，这些方法能够进行很多有用的操作。方法和函数有些类似，也接收参数然后返回一个值，但语法稍微不同。比如，upper 这个方法就读取一个字符串，返回一个全部为大写字母的新字符串。
 
@@ -297,7 +297,7 @@ A method call is called an invocation;方法的调用被叫做——调用（译
 
 这个搜索失败了，因为 b 并没有在索引1到2且不包括2的字符中间出现。搜索到指定的第三个变量作为索引的位置，但不包括该位置，这就让 find 方法与切片操作符相一致。
 
-##8.9  运算符 in
+## 8.9 运算符 in
 
 in 这个词在字符串操作中是一个布尔操作符，它读取两个字符串，如果前者的字符串为后者所包含，就返回真，否则为假：
 
@@ -321,7 +321,7 @@ def in_both(word1, word2):
 >>> in_both('apples', 'oranges')
 a e s
 ```
-##8.10  字符串比较
+## 8.10 字符串比较
 
 关系运算符对于字符串来说也可用。比如可以看看两个字符串是不是相等：
 
@@ -346,7 +346,7 @@ Python 对大小写字母的处理与人类常规思路不同。所有大写字�
 
 一个解决这个问题的普遍方法是把字符串转换为标准格式，比如都转成小写的，然后再进行比较。一定要记得哈，以免你遇到一个用 Pineapple 武装着自己的家伙的时候手足无措。
 
-##8.11  调试
+## 8.11 调试
 
 使用索引来遍历一个序列中的值的时候，弄清楚遍历的开头和结尾很不容易。下面这个函数用来对比两个单词，如果一个是另一个的倒序就返回真，但这个函数代码中有两处错误：
 
@@ -373,14 +373,14 @@ i 和 j 都是索引：i 从头到尾遍历单词 word1，而 j 逆向遍历单�
 
 ```Python
 >>> is_reverse('pots', 'stop')
- ...   File "reverse.py", line 15, in is_reverse     if word1[i] != word2[j]: IndexError: string index out of range
+ ...  File "reverse.py", line 15, in is_reverse   if word1[i] != word2[j]: IndexError: string index out of range
 ```
 
 为了改正这个错误，第一步就是在出错的那行之前先输出索引的值。
 
 ```Python
 while j > 0:
-	print(i, j)        # print here
+	print(i, j)    # print here
 	if word1[i] != word2[j]:
 		return False
 	i = i+1
@@ -414,7 +414,7 @@ ________________________________________
 
 从这个图上运行的程序，文件，更改这些值I和J在每一次迭代过程。发现并解决此函数中的二次错误。
 
-##8.12  Glossary 术语列表
+## 8.12 Glossary 术语列表
 object:
 Something a variable can refer to. For now, you can use “object” and “value” interchangeably.
 
@@ -475,17 +475,17 @@ A function or method argument that is not required.
 
 >可选参数：一个函数或者方法中有一些参数是可选的，非必需的。
 
-##8.13  练习
-###  练习1
+## 8.13 练习
+## #  练习1
 
-阅读 [这里](http://docs.python.org/3/library/stdtypes.html#string-methods)关于字符串的文档。你也许会想要试试其中一些方法，来确保你理解它们的意义。比如 strip 和 replace 都特别有用。
+阅读 [这里](http://docs.python.org/3/library/stdtypes.html# string-methods)关于字符串的文档。你也许会想要试试其中一些方法，来确保你理解它们的意义。比如 strip 和 replace 都特别有用。
 
 文档的语法有可能不太好理解。比如在find 这个方法中，方括号表示了可选参数。所以 sub 是必须的参数，但 start 是可选的，如果你包含了 start，end 就是可选的了。
 
-###  练习2
+## #  练习2
 字符串有个方法叫 count，与咱们在8.7中写的 count 函数很相似。 阅读一下这个方法的文档，然后写一个调用这个方法的代码，统计一下 banana 这个单词中 a 出现的次数 。
 
-###  练习3
+## #  练习3
 字符串切片可以使用第三个索引，作为步长来使用；步长的意思就是取字符的间距。一个步长为2的意思就是每隔一个取一个字符；3的意思就是每次取第三个，以此类推。
 
 ```Python
@@ -497,7 +497,7 @@ A function or method argument that is not required.
 
 使用这个方法把练习三当中的is_palindrome写成一个一行代码的版本。
 
-###  练习4
+## #  练习4
 下面这些函数都试图检查一个字符串是不是包含小写字母，但他们当中肯定有些是错的。描述一下每个函数真正的行为（假设参数是一个字符串）。
 
 ```Python
@@ -528,7 +528,7 @@ def any_lowercase5(s):
 			return False
 		return True
 ```
-###  练习5
+## #  练习5
 
 凯撒密码是一种简单的加密方法，用的方法是把每个字母进行特定数量的移位。对一个字母移位就是把它根据字母表的顺序来增减对应，如果到末尾位数不够就从开头算剩余的位数，『A』移位3就是『D』，而『Z』移位1就是『A』了。
 

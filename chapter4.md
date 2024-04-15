@@ -1,4 +1,4 @@
-#第四章  案例学习：交互设计
+# 第四章 案例学习：交互设计
 
 本章会提供一个案例，用于展示如何却设计一些共同工作的函数。
 
@@ -11,7 +11,7 @@
 
 本章代码样例可以点击[此链接](http://thinkpython2.com/code/polygon.py)来下载了。
 
-##4.1  乌龟模块
+## 4.1 乌龟模块
 
 要检查你是不是已经安装了这个乌龟模块，你要打开Python解释器来输入如下内容：
 
@@ -68,24 +68,24 @@ bob.fd(100)
 
 现在修改一下程序，去画一个正方形。这个程序运行不好的话就不要继续后面的章节！
 
-##4.2  简单的重复
+## 4.2 简单的重复
 
 你估计会写出如下的内容：
 
 ```Python
 bob.fd(100) 
-bob.lt(90)  
+bob.lt(90) 
 bob.fd(100) 
-bob.lt(90)  
+bob.lt(90) 
 bob.fd(100) 
-bob.lt(90)  
+bob.lt(90) 
 bob.fd(100) 
 ```
 
 上面这个太麻烦了，咱们可以用一个for语句来让这个过程更简洁。把下面的代码添加到mypolygon.py中然后运行一下：
 
 ```Python
-for i in range(4):     
+for i in range(4):   
 	print('Hello!') 
 ```
 
@@ -104,8 +104,8 @@ Hello!
 这就是一个用for语句来画正方形的语句：
 
 ```Python
-for i in range(4):     
-	bob.fd(100)     
+for i in range(4):   
+	bob.fd(100)   
 	bob.lt(90) 
 ```
 
@@ -115,7 +115,7 @@ for语句也被叫做循环，因为运行流程会重复执行循环体。在�
 
 这次的正方形绘制代码实际上和之前的少有不同了，因为在画完了最后一个边之后，多了一次转向。多出来的这部分需要消耗额外的时间，但简化了下次我们来循环进行绘制的过程。这个版本的代码也有一个额外的效果：让小乌龟回到起点，朝着初始方向。
 
-##4.3  练习
+## 4.3 练习
 
 下面是一系列使用TurtleWorld的练习。主要就是比较有意思，不过也有一些训练的作用。你做这些练习的时候，一定要注意考虑这些训练的作用。
 
@@ -133,15 +133,15 @@ for语句也被叫做循环，因为运行流程会重复执行循环体。在�
 
 5.在circle基础上做一个叫做arc的函数，在circle的基础上添加一个angle（译者注：角度）变量，用这个角度值来确定画多大的一个圆弧。用度做单位，当angle等于360度的时候，arc函数就应当画出一个整团了。
 
-##4.4  封装
+## 4.4 封装
 
 第一个练习让你把正方形绘制的代码定义到一个函数里面，然后调用这个函数，传入一个turtle对象作为参数。下面就是个例子了：
 
 ```Python
-def square(t):     
-	for i in range(4):         
-		t.fd(100)         
-		t.lt(90)  
+def square(t):   
+	for i in range(4):     
+		t.fd(100)     
+		t.lt(90) 
 square(bob) 
 ```
 
@@ -156,15 +156,15 @@ square(alice)
 
 用函数的形式把一段代码包装起来，叫做封装。这样有一个好处，就是给代码起了个名字，有类似文档说明的功能，更好理解了。另外一个好处是下次重复使用这段代码的时候，再次调用函数就可以了，这比复制粘贴函数体可方便多了。
 
-##4.5  泛化
+## 4.5 泛化
 
 下一步就是给square函数添加一个长度参数了。下面是样例：
 
 ```Python
-def square(t, length):     
-	for i in range(4):         
-		t.fd(length)         
-		t.lt(90)  
+def square(t, length):   
+	for i in range(4):     
+		t.fd(length)     
+		t.lt(90) 
 square(bob, 100) 
 ```
 
@@ -173,11 +173,11 @@ square(bob, 100)
 下一步也还是泛化。这次就是不光要画正方形了，要画一个多边形，可以指定边数的。下面是样例：
 
 ```Python
-def polygon(t, n, length):    
-	angle = 360 / n     
-	for i in range(n):         
-		t.fd(length)         
-		t.lt(angle)  
+def polygon(t, n, length):  
+	angle = 360 / n   
+	for i in range(n):     
+		t.fd(length)     
+		t.lt(angle) 
 polygon(bob, 7, 70) 
 ```
 
@@ -196,16 +196,16 @@ polygon(bob, n=7, length=70)
 
 这种语法结构让程序更容易被人读懂。也能提醒实际参数和形式参数的使用过程：调用一个函数的时候，把实际参数的值赋给了形式参数。
 
-##4.6  接口设计
+## 4.6 接口设计
 
 下一步就是写circle这个函数了，需要半径r作为一个参数。下面是一个简单的样例，使用polygon函数来画一个50边形，来接近一个圆：
 
 ```Python
-import math  
-def circle(t, r):     
-	circumference = 2 * math.pi * r    
-	n = 50     
-	length = circumference / n     
+import math 
+def circle(t, r):   
+	circumference = 2 * math.pi * r  
+	n = 50   
+	length = circumference / n   
 	polygon(t, n, length) 
 ```
 
@@ -222,16 +222,16 @@ n是我们用来逼近一个圆所用的线段数量，所以length就是每一�
 与其让接口复杂冗余，更好的思路是让n根据周长来自适应一个合适的值：
 
 ```Python
-def circle(t, r):     
-	circumference = 2 * math.pi * r     
-	n = int(circumference / 3) + 1     
-	length = circumference / n     
+def circle(t, r):   
+	circumference = 2 * math.pi * r   
+	n = int(circumference / 3) + 1   
+	length = circumference / n   
 	polygon(t, n, length) 
 ```
 
 现在线段个数就是周长的三分之一了，因此每段线段的长度近似为3，这个大小可以让圆看着不错，也对任意大小的圆都适用了。
 
-##4.7  重构
+## 4.7 重构
 
 当我写circle这个函数的时候，我能利用多边形函数polygon是因为一个足够多边的多边形和圆很接近。但圆弧就不太适合这个思路了；我们不能用多边形或者圆来画一个圆弧。
 
@@ -239,43 +239,43 @@ def circle(t, r):
 一个替代的方法就是把polygon修改一下，转换成圆弧。结果大概如下所示：
 
 ```Python
-def arc(t, r, angle):     
-	arc_length = 2 * math.pi * r * angle / 360     
-	n = int(arc_length / 3) + 1     
-	step_length = arc_length / n     
-	step_angle = angle / n          
-	for i in range(n):        
-		t.fd(step_length)         
+def arc(t, r, angle):   
+	arc_length = 2 * math.pi * r * angle / 360   
+	n = int(arc_length / 3) + 1   
+	step_length = arc_length / n   
+	step_angle = angle / n     
+	for i in range(n):    
+		t.fd(step_length)     
 		t.lt(step_angle) 
 ```
 
 这个函数的后半段看着和多边形那个还挺像的，但必须修改一下接口才能重利用多边形的代码。我们在多边形函数上增加angle（角度）作为第三个参数，但继续叫多边形就不太合适了，因为不闭合啊！所以就改名叫它多段线polyline：
 
 ```Python
-def polyline(t, n, length, angle):     
-	for i in range(n):         
-	t.fd(length)         
+def polyline(t, n, length, angle):   
+	for i in range(n):     
+	t.fd(length)     
 	t.lt(angle)
 ```
 
 现在就可以用多段线polyline来重写多边形polygon和圆弧arc：
 
 ```Python
-def polygon(t, n, length):     
-	angle = 360.0 / n     
-	polyline(t, n, length, angle)  
-def arc(t, r, angle):     
-	arc_length = 2 * math.pi * r * angle / 360     
-	n = int(arc_length / 3) + 1     
-	step_length = arc_length / n     
-	step_angle = float(angle) / n     
+def polygon(t, n, length):   
+	angle = 360.0 / n   
+	polyline(t, n, length, angle) 
+def arc(t, r, angle):   
+	arc_length = 2 * math.pi * r * angle / 360   
+	n = int(arc_length / 3) + 1   
+	step_length = arc_length / n   
+	step_angle = float(angle) / n   
 	polyline(t, n, step_length, step_angle) 
 ```
 
 最终，咱们就可以用圆弧arc来重写circle的实现了：
 
 ```Python
-def circle(t, r):     
+def circle(t, r):   
 	arc(t, r, 360) 
 ```
 
@@ -283,7 +283,7 @@ def circle(t, r):
 
 如果我们事先进行了计划，估计就会先写出多段线函数polyline，然后就不用重构了，但大家在开始一个项目之前往往不一定了解的那么清楚。一旦开始编码了，你就逐渐更理解其中的问题了。有时候重构就意味着你已经学到了新的内容了。
 
-##4.8  开发计划
+## 4.8 开发计划
 
 开发计划是写程序的一系列过程。我们本章所用的就是『封装-泛化』的模式。这一过程的步骤如下：
 
@@ -299,17 +299,17 @@ def circle(t, r):
 
 这个模式有一些缺点，我们后续会看到一些替代的方式，但这个模式是很有用的，尤其对耐饿实现不值得怎么去把程序分成多个函数的情况。
 
-##4.9  文档字符串
+## 4.9 文档字符串
 
 文档字符串是指：在函数开头部位，解释函数的交互接口的字符串，doc是文档documentation的缩写。下面是一个例子：
 
 ```Python
-def polyline(t, n, length, angle):     
+def polyline(t, n, length, angle):   
 """
-Draws n line segments with the given length and     angle (in degrees) between them. 
-t is a turtle.     """         
-	for i in range(n):         
-		t.fd(length)         
+Draws n line segments with the given length and   angle (in degrees) between them. 
+t is a turtle.   """     
+	for i in range(n):     
+		t.fd(length)     
 		t.lt(angle) 
 ```
 
@@ -319,7 +319,7 @@ t is a turtle.     """
 
 写这种文档，对交互接口的设计来说，是至关重要的。设计良好的交互接口应该很容易解释明白；如果你的函数有一个特别不好解释了，估计这个函数的交互设计还存在需要改进的地方。
 
-##4.10  调试
+## 4.10 调试
 
 一个交互接口，就像是函数和调用者的一个中间人。调用者提供特定的参数，函数完成特定的任务。
 
@@ -331,7 +331,7 @@ t is a turtle.     """
 
 如果前置条件得到了满足，而后置条件未能满足，这个bug就是函数的了。所以如果你的前后置条件都弄清晰，对调试很有帮助。
 
-##4.11  Glossary 术语列表
+## 4.11 Glossary 术语列表
 method:
 A function that is associated with an object and called using dot notation.
 
@@ -387,8 +387,8 @@ A requirement that should be satisfied by the function before it ends.
 
 >后置条件：函数结束之前应该满足的一些要求。
 
-##4.12  练习
-###练习1
+## 4.12 练习
+## # 练习1
 点击下面这个链接[下载代码](http://thinkpython2.com/code/polygon.py)。
 
 1.	画一个栈图，表明运行函数circle(bob,radius)时候程序的状态。你可以手算一下，或者把输出语句加到代码上。
@@ -399,7 +399,7 @@ ________________________________________
  ![Turtle flowers](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonExercise4.2.png)
 Figure 4.1: Turtle flowers.
 ________________________________________
-###练习2
+## # 练习2
 写一系列的合适的函数组合，画出图4.1所示的花图案。
 
 [样例]( http://thinkpython2.com/code/flower.py) 
@@ -409,13 +409,13 @@ ________________________________________
 ![Turtle pies](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPythonExercise4.3.png)
 Figure 4.2: Turtle pies.
 ________________________________________
-###练习3
+## # 练习3
 
 写一系列的合适的函数组合，画出图4.2所示的形状。
 
 [样例](http://thinkpython2.com/code/pie.py)
 
-###练习4
+## # 练习4
 
 字母表当中的字母都可以用一定数量的基本元素来构建，比如竖直或者水平的线条，以及一些曲线。设计一个能用最小数量的基本元素画出来的字母表，然后写个函数来画字母出来。
 
@@ -423,6 +423,6 @@ ________________________________________
 
 你可以参考这里的[样例](http://thinkpython2.com/code/letters.py);同时还需要[这些](http://thinkpython2.com/code/polygon.py)。
 
-##练习5
+## 练习5
 去[Wiki百科](http://en.wikipedia.org/wiki/Spiral)看一下螺旋线的相关内容;然后写个程序来画阿基米德曲线（曲线中的一种）。[样例](http://thinkpython2.com/code/spiral.py)
 

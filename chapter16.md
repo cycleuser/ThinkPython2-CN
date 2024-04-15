@@ -1,10 +1,10 @@
-#第十六章 类和函数
+# 第十六章 类和函数
 
 现在我们已经知道如何创建新类型了，下一步就要写一些函数了，这些函数用自定义类型做参数和返回值。在本章中还提供了一种函数式编程的模式，以及两种新的程序开发规划方式。
 
 本章的样例代码可以在[这里](http://thinkpython2.com/code/Time1.py)下载。然后练习题的样例代码可以在[这里](http://thinkpython2.com/code/Time1_soln.py)下载到。
 
-##16.1  时间
+## 16.1 时间
 下面又是一个自定义类型的例子，这次咱们定义一个叫做 Time 的类，记录下当日的时间。
 
 类的定义是如下这样：
@@ -12,7 +12,7 @@
 ```Python
 class Time:
 """Represents the time of day.
-attributes: hour, minute, second     """
+attributes: hour, minute, second   """
 ```
 我们可以建立一个新的 Time 对象，然后对时分秒分别进行赋值：
 
@@ -35,7 +35,7 @@ ________________________________________
 ![Figure 16.1: Object diagram.](http://7xnq2o.com1.z0.glb.clouddn.com/ThinkPython16.1.png)
 Figure 16.1: Object diagram.
 ________________________________________
-##16.2  纯函数
+## 16.2 纯函数
 
 后面的这些章节中，我们要写两个函数来对 time 进行加法操作。这两个函数展示了两种函数类型：纯函数和修改器。写这两个函数的过程中，也体现了我即将讲到的一种新的开发模式：原型和补丁模式，这种方法就是在处理复杂问题的时候，先从简单的原型开始，然后逐渐解决复杂的内容。
 
@@ -59,7 +59,7 @@ def add_time(t1, t2):
 >>> start = Time()
 >>> start.hour = 9
 >>> start.minute = 45
->>> start.second =  0
+>>> start.second = 0
 >>> duration = Time()
 >>> duration.hour = 1
 >>> duration.minute = 35
@@ -92,7 +92,7 @@ def add_time(t1, t2):
 
 这回函数正确工作了，但代码也开始变多了。稍后我们就能看到一个短一些的替代方案。
 
-##16.3  修改器
+## 16.3 修改器
 有时候需要对作为参数的对象进行一些修改。这时候这些修改就可以被调用者察觉。这样工作的函数就叫修改器了。
 
 increment 函数，增加给定的秒数到一个 Time 对象，就可以被改写成一个修改器。
@@ -129,7 +129,7 @@ def increment(time, seconds):
 
 做个练习，写一个用纯函数实现的 increment，创建并返回一个新的 Time 对象，而不是修改参数。
 
-##16.4  原型与规划
+## 16.4 原型与规划
 
 这次我演示的开发规划就是『原型与补丁模式』。对每个函数，我都先谢了一个简单的原型，只进行基本的运算，然后测试一下，接下来逐步修补错误。
 
@@ -182,7 +182,7 @@ def add_time(t1, t2):
 
 有意思的事，有时候以困难模式来写一个程序（比如用更加泛化的模式），反而能让开发更简单（因为这样就减少了特例情况，也减少了出错误的概率了。）
 
-##16.5  调试
+## 16.5 调试
 
 对于一个 Time 对象来说，只要分和秒的值在0-60的前闭后开区间（即可以为0但不可以为60），并且小时数为正数，就是格式正确的。小时和分钟都应该是整数，但秒是可以为小数的。
 
@@ -220,7 +220,7 @@ def add_time(t1, t2):
 
 assert 语句是很有用的，可以用来区分条件语句的用途，将 assert 这种用于检查错误的语句与常规的条件语句在代码上进行区分。
 
-##16.6  Glossary 术语列表
+## 16.6 Glossary 术语列表
 prototype and patch:
 A development plan that involves writing a rough draft of a program, testing, and correcting errors as they are found.
 
@@ -256,15 +256,15 @@ A statement that check a condition and raises an exception if it fails.
 
 >assert 语句：一种检查错误的语句，检查一个条件，如果不满足就抛出异常。
 
-##16.7  练习
+## 16.7 练习
 本章的例子可以在 [这里](http://thinkpython2.com/code/Time1.py)下载；练习题的答案可以在[这里](http://thinkpython2.com/code/Time1_soln.py)下载。
 
-###  练习1
+## #  练习1
 写一个函数，名为mul_time，接收一个Time 对象和一个数值，返回一个二者相乘得到的新的Time 对象。
 
 然后用 mul_time 这个函数写一个函数，接收一个 Time 对象，代表着一个比赛的结束时间，还有一个数值，代表比赛距离，然后返回一个表示了平均步调（单位距离花费的时间）的新的 Time 对象。
 
-###  练习2
+## #  练习2
 datetime 模块提供了一些 time 对象，和本章的 Time 对象很相似，但前者提供了更多的方法和运算符。读一读[这里的文档] [Here](http://docs.python.org/3/library/datetime.html)吧。
 
 1.	用 datetime 模块来写一个函数，获取当前日期，然后输出今天是星期几。
